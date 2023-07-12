@@ -13,17 +13,18 @@ table_list = ['roster_1', 'roster_2', 'roster_3', 'roster_4', 'roster_5']
 # Base query
 query = """
     SELECT 
-    Person_Id as member_id,
-    First_Name as member_first_name,
-    Last_Name as member_last_name,
-    Dob as date_of_birth,
-    Street_Address as main_address,
-    City as city,
-    State as state,
-    Zip as zip_code,
-    payer as payer
+        Person_Id as member_id,
+        First_Name as member_first_name,
+        Last_Name as member_last_name,
+        Dob as date_of_birth,
+        Street_Address as main_address,
+        City as city,
+        State as state,
+        Zip as zip_code,
+        payer as payer
     FROM {} 
-    WHERE eligibility_start_date <= '2022-04-01' AND eligibility_end_date >= '2022-04-30';
+        WHERE eligibility_start_date <= '2022-04-01' 
+        AND eligibility_end_date >= '2022-04-30';
 """
 
 # Create a union query for each table
